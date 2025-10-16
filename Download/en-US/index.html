@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="../resources/css/styles.css" />
+
+    <script src="../resources/scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../resources/scripts/anticipation.js" type="text/javascript"></script>
+    <script src="../resources/scripts/compat.js" type="text/javascript"></script>
+    <script src="../resources/scripts/accessibility.js" type="text/javascript"></script>
+
+    <title>Get Windows 10</title>
+</head>
+<body>
+    <div id="loadingOverlay" class="whiteBg">
+        <img src="../resources/images/Loading_BlueFast_16x.gif" alt="Loading" />&#160;&#160;Please wait
+    </div>
+
+    <div class="header">
+        <div class="showNav" id="showNav" aria-label="Show navigation"></div>
+        <a href="http://go.microsoft.com/fwlink/?LinkId=522191" target="_blank" class="headerRight" id="headerLearnMore">Learn more on windows.com</a>
+    </div>
+    <div id="leftNav" class="leftNav">
+        <div class="hideNav" id="hideNav" aria-label="Hide navigation"></div>
+        <div class="leftNavLinks">
+            <h3>About Windows&#160;10</h3>
+            <ul role="navigation">
+                <li class="selected"><a href="#" id="leftNav01">Upgrade for free</a></li>
+                <li><a href="#" id="leftNav02">Familiar and easy</a></li>
+                <li><a href="#" id="leftNav03">Designed for speed</a></li>
+                <li><a href="#" id="leftNav04">Amazing new features</a></li>
+                <li><a href="#" id="leftNav05">Apps &amp; games</a></li>
+                <li><a href="#" id="leftNav06">How it works</a></li>
+            </ul>
+
+            <h3>Getting the upgrade</h3>
+            <ul role="navigation">
+                <li><a href="#" id="leftNavReserve">Reserve your upgrade</a></li>
+                <li id="leftNavCompatLi"><a href="#" id="leftNavCompat">Check your PC</a></li>
+                <li id="leftNavCheckStatusLi"><a href="#" id="leftNavCheckStatus">View confirmation</a></li>
+                <li><a href="#" id="leftNav_getHelp">Get help</a></li>
+            </ul>
+        </div>
+
+
+        <div class="navLogo">
+            <img src="../resources/images/msft_logo_nav.png" alt="Microsoft" />
+        </div>
+    </div>
+    <div class="contentContainer">
+        <div class="staticSlides" id="staticSlides">
+            <div id="comingSoon" class="slide whiteBg">
+                <div class="slide4060">
+                    <div class="floatLeft">
+                        <img src="../resources/images/winlogo.png" alt="Windows 10" />
+                        <div class="reserveBlue">Reserve your place in line!</div>
+                    </div>
+                    <div class="floatRight">
+                        <p>
+                            We’re happy you decided to reserve your upgrade to Windows&#160;10! We’ll be rolling out Windows&#160;10 in waves, so by reserving, you’ll be one of the first people to get it.
+
+                        </p>
+                        <div class="comingSoonBtnContainer">
+                            <div class="btnWhite"><a href="#" id="comingSoonSlide_reserve">Yes, reserve my free upgrade</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reservationConfirmation" class="slide whiteBg noNav">
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        All done for now
+                    </h1>
+
+                    <div class="slideSubHeading narrator">
+                        <p>
+                            There’s nothing else you need to do. You’ll get a notification on your PC or tablet when Windows&#160;10 is ready for you.
+                        </p>
+
+                    </div>
+
+                    <div class="btnWhite"><a href="#" id="confirmation_Close">Close</a></div>
+
+                </div>
+            </div>
+
+            <div id="reservationCancelledConfirmed" class="slide whiteBg noNav">
+
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        Wait, really? Cancel?
+                    </h1>
+                    <div class="slideSubHeading narrator">
+                        If you choose to cancel, you may miss out on this offer to get a free upgrade to Windows&#160;10.
+                    </div>
+                    <div class="reservationControls">
+                        <div class="btnWhite"><a href="#" id="cancellationConfirm_Keep">Keep my reservation</a></div>
+                        <div class="btnWhite"><a href="#" id="cancellationConfirm_Cancel">Cancel reservation</a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="reservationCancelled" class="slide whiteBg noNav">
+
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        OK, reservation cancelled
+                    </h1>
+                    <div class="slideSubHeading narrator">
+                        You can always find more information about Windows&#160;10 on windows.com.
+                    </div>
+                    <div class="reservationControls">
+                        <div class="btnWhite"><a href="#" id="cancellation_Keep">Actually, I do want the free upgrade!</a></div>
+                        <div class="btnWhite"><a href="#" id="cancellation_Close">Close</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reservationAdminSlide" class="slide whiteBg">
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        Please sign in as an administrator
+                    </h1>
+                    <div class="narrator slideSubHeading">
+                        You need to sign in to this PC as an administrator to reserve your upgrade to Windows&#160;10.
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="reservationFailedSlide" class="slide whiteBg">
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        We couldn’t reserve your upgrade
+                    </h1>
+                    <div class="narrator slideSubHeading">
+                        It might work to try again later.
+
+                        <br /><br />
+                        If you’re still stuck, Microsoft Answer Desk can get you going. First, look at our <a href="http://go.microsoft.com/fwlink/?LinkId=522194" target="_blank">Upgrade to Windows&#160;10 frequently asked questions</a>. If you need more help with the upgrade, a Microsoft Answer Tech is here for you.
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="cancellationAdminSlide" class="slide whiteBg">
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        Please sign in as an administrator
+                    </h1>
+                    <div class="narrator slideSubHeading">
+                        You need to sign in to this PC as an administrator to cancel your upgrade to Windows&#160;10.
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="cancellationFailedSlide" class="slide whiteBg">
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        Your reservation couldn't be cancelled
+                    </h1>
+                    <div class="narrator slideSubHeading">
+                        Something went wrong. Please try again later.
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="checkReservationStatus_reserved" class="slide whiteBg noNav">
+
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        Your upgrade is reserved!
+                    </h1>
+                    <div class="slideSubHeading narrator">
+                        There’s nothing you need to do right now. You’ll get a notification on your PC or tablet when Windows&#160;10 is ready to install.
+                    </div>
+                    <div class="reservationControls">
+                        <a href="#" id="checkReservationStatus_cancelReservation">Cancel reservation</a>
+                        <div class="btnWhite"><a href="#" id="checkReservationStatus_reserved_Close">Close</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="checkReservationStatus_not_reserved" class="slide whiteBg noNav">
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        Your upgrade hasn't been reserved yet
+                    </h1>
+                    <div class="slideSubHeading narrator">
+                        Click below and be one of the first to get your free upgrade to Windows&#160;10. There’s no obligation and you can cancel your reservation at any time.
+                    </div>
+                    <div class="reservationControls">
+                        <div class="btnWhite"><a href="#" id="checkReservationStatus_Reserve">Reserve</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="compatNotReadySlide" class="slide whiteBg">
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        This report isn’t available right now
+                    </h1>
+                    <div class="narrator slideSubHeading">
+                        You can still reserve your upgrade.  When it’s time to start the upgrade, we’ll run another report to make sure your PC works with Windows&#160;10.
+                    </div>
+                    <div class="btnWhite"><a href="#" id="compatNotReadySlide_Reserve">Reserve</a></div>
+                </div>
+            </div>
+
+            <div id="getHelpSlide" class="slide whiteBg noNav">
+
+                <div class="slideFullWidth">
+                    <h1 class="slideHeading">
+                        Microsoft Answer Desk has your back
+                    </h1>
+                    <div class="slideSubHeading">
+                        Reserve your copy of Windows&#160;10 with confidence.<br /><br />
+                        If you need help with Windows&#160;10 when it’s available in early August, you’ll get free setup and installation support from an Answer Tech via phone or chat.<br /><br />
+
+                        For questions about reserving your copy, take a look at our <a href="http://go.microsoft.com/fwlink/?LinkId=522192" target="_blank">Upgrade to Windows&#160;10 frequently asked questions</a>.
+
+
+                    </div>
+                    <div class="reservationControls oneBtn">
+                        <div class="btnWhite"><a href="#" id="getHelp_Reserve">Reserve now</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="compat" class="whiteBg">
+                <div class="stringTable">
+                    <!-- left nav link strings -->
+                    <div id="compat_nav_success">Your PC is ready</div>
+                    <div id="compat_nav_incomplete">Check your PC</div>
+                    <!-- compat report heading at landing page -->
+                    <div id="compat_landingpage_Heading_green">Your PC is ready.</div>
+                    <div id="compat_landingpage_Heading_info">Your PC is ready.</div>
+                    <div id="compat_landingpage_Heading_yellow">Your PC can be upgraded.</div>
+                    <div id="compat_landingpage_Heading_orange">This PC will have problems.</div>
+                    <div id="compat_landingpage_Heading_red">This PC will have problems.</div>
+                    <!-- compat report subheading at landing page -->
+                    <div id="compat_landingpage_SubHeading_green">This PC is compatible</div>
+                    <div id="compat_landingpage_SubHeading_info">This PC is compatible</div>
+                    <div id="compat_landingpage_SubHeading_yellow">This PC is compatible</div>
+                    <div id="compat_landingpage_SubHeading_orange">Issues require attention</div>
+                    <div id="compat_landingpage_SubHeading_red">Issues require attention</div>
+                    <!-- compat report heading -->
+                    <div id="compat_Heading_success"><div class="compat_Heading_success">This PC meets system requirements</div></div>
+                    <div id="compat_Heading_red"><div class="compat_Heading_failure">This PC can't run Windows&#160;10</div></div>
+                    <div id="compat_Heading_reportFailure"><div class="compat_Heading_failure">An error occurred</div></div>
+                    <!-- compat report subheading -->
+                    <div id="compat_SubHeading_success"><div class="compat_SubHeading">This PC meets system requirements.</div></div>
+                    <div id="compat_SubHeading_red"><div class="compat_SubHeading">It doesn't meet the system requirements.</div></div>
+                    <div id="compat_SubHeading_reportFailure"><div class="compat_SubHeading">An error occurred running the compatibility report, please try again later.</div></div>
+                    <!-- compat report section headings -->
+                    <div id="compat_sectionHeading_hardware"><div class="compat_Heading_hardware narrator">Hardware compatibility</div><div class="separator"><hr /></div></div>
+                    <div id="compat_sectionHeading_software"><div class="compat_Heading_software narrator">Software compatibility</div><div class="separator"><hr /></div></div>
+                    <div id="compat_sectionSubHeading_noIssues"><div class="compat_sectionSubHeading_issues narrator">0 known issues found</div></div>
+                    <div id="compat_sectionSubHeading_issues"><div class="compat_sectionSubHeading_issues narrator"><span class="issueCount"></span>known issues found</div></div>
+                    <!-- compat report section messages -->
+                    <div id="compat_sectionMsg_1"><div class="compat_SubHeading narrator">These changes will be made to your PC during the upgrade.</div></div>
+                    <div id="compat_sectionMsg_2"><div class="compat_SubHeading narrator">These apps might not work correctly after the upgrade.</div></div>
+                    <div id="compat_sectionMsg_3"><div class="compat_SubHeading reducedFunctionality narrator">These devices aren’t compatible with Windows&#160;10.</div></div>
+                    <div id="compat_sectionMsg_4"><div class="compat_SubHeading narrator">These devices might not work correctly after the upgrade.</div></div>
+                    <div id="compat_sectionMsg_6"><div class="compat_SubHeading criticalIssues narrator">Here’s why Windows&#160;10 can’t be installed on this PC.</div></div>
+                    <div id="compat_sectionMsg_7"><div class="compat_SubHeading narrator">You'll need to uninstall these apps during the upgrade</div></div>
+                    <div id="compat_sectionMsg_8"><div class="compat_SubHeading narrator">You'll need to uninstall these apps during the upgrade, but they can be reinstalled after it's done.</div></div>
+                    <div id="compat_sectionMsg_9"><div class="compat_SubHeading narrator">You'll need to uninstall or update these apps during the upgrade.</div></div>
+                    <div id="compat_sectionMsg_10"><div class="compat_SubHeading narrator">These apps will need to be reinstalled after the upgrade.</div></div>
+                    <div id="compat_sectionMsg_11"><div class="compat_SubHeading narrator">Keep this in mind before you upgrade.</div></div>
+                    <div id="compat_sectionMsg_12"><div class="compat_SubHeading narrator">These apps won't work after the upgrade.</div></div>
+                    <!-- compat report AssetMajorMsgId messages -->
+                    <div id="compat_assetMajorMsg_100"><div class="compat_assetMajorMsg narrator">You need to free up some disk space on your PC.</div></div>
+                    <div id="compat_assetMajorMsg_101"><div class="compat_assetMajorMsg narrator">BitLocker encryption won't be available after upgrade.</div></div>
+                    <div id="compat_assetMajorMsg_102"><div class="compat_assetMajorMsg narrator">You need to install updates to your current version of Windows.</div></div>
+                    <div id="compat_assetMajorMsg_103"><div class="compat_assetMajorMsg narrator">Windows&#160;10 can't be installed when your PC is in Safe Mode.</div></div>
+                    <div id="compat_assetMajorMsg_104"><div class="compat_assetMajorMsg narrator">Windows&#160;10 can't be installed on a Windows To Go drive.</div></div>
+                    <div id="compat_assetMajorMsg_105"><div class="compat_assetMajorMsg narrator">Windows&#160;10 can't be installed on a virtual drive.</div></div>
+                    <div id="compat_assetMajorMsg_107"><div class="compat_assetMajorMsg narrator">Because you're running a build of Windows that isn't supported, only your personal files will be available after the upgrade.  Your apps and any changes you've made to settings won't be available.</div></div>
+                    <div id="compat_assetMajorMsg_108"><div class="compat_assetMajorMsg narrator">Windows&#160;10 can't be installed when your PC is in Audit Mode.</div></div>
+                    <div id="compat_assetMajorMsg_109"><div class="compat_assetMajorMsg narrator">You'll need to reinstall language packs after the upgrade is complete.</div></div>
+                    <div id="compat_assetMajorMsg_110"><div class="compat_assetMajorMsg narrator">Because your current version of Windows is installed in an unsupported directory, only your personal files will be available after the upgrade.  Your apps and any changes you've made to settings won't be available.</div></div>
+                    <div id="compat_assetMajorMsg_111"><div class="compat_assetMajorMsg narrator">You might need to suspend disk encryption before the upgrade.</div></div>
+                    <div id="compat_assetMajorMsg_112"><div class="compat_assetMajorMsg narrator">Windows Media Center will be uninstalled during the upgrade. It isn't available in Windows&#160;10.</div></div>
+                    <div id="compat_assetMajorMsg_113"><div class="compat_assetMajorMsg narrator">The CPU isn't supported.</div></div>
+                    <div id="compat_assetMajorMsg_114"><div class="compat_assetMajorMsg narrator">The BIOS isn't supported.</div></div>
+                    <div id="compat_assetMajorMsg_115"><div class="compat_assetMajorMsg narrator">This PC doesn't have enough RAM.</div></div>
+                    <div id="compat_assetMajorMsg_116"><div class="compat_assetMajorMsg narrator">The hard disk controller isn't supported.</div></div>
+                    <div id="compat_assetMajorMsg_117"><div class="compat_assetMajorMsg narrator">There are no supported networking devices.</div></div>
+                    <div id="compat_assetMajorMsg_118"><div class="compat_assetMajorMsg narrator">You won’t be able to restore your PC to factory settings after the upgrade.</div></div>
+                    <div id="compat_assetMajorMsg_119"><div class="compat_assetMajorMsg narrator">Touch screen: Yes</div></div>
+                    <div id="compat_assetMajorMsg_120"><div class="compat_assetMajorMsg narrator">Touch screen: Not Required</div></div>
+                    <!-- compat report AssetMinorMsgId messages -->
+                    <div id="compat_assetMinorMsg_200"><div class="compat_assetMinorMsg narrator">Your display won’t work.</div></div>
+                    <div id="compat_assetMinorMsg_201"><div class="compat_assetMinorMsg narrator">This media device won't work.</div></div>
+                    <div id="compat_assetMinorMsg_202"><div class="compat_assetMinorMsg narrator">You might not be able to connect to the Internet.</div></div>
+                    <div id="compat_assetMinorMsg_209"><div class="compat_assetMinorMsg narrator">Your printer won't work.</div></div>
+                    <div id="compat_assetMinorMsg_210"><div class="compat_assetMinorMsg narrator">This device isn't supported.</div></div>
+                    <!-- compat buttons -->
+                    <div id="compat_reserveButton">Reserve</div>
+                    <div id="compat_closeButton">Close</div>
+                    <div id="compat_PCleadIn">Would you like to see what new PCs are available?</div>
+                    <div id="compat_PCButton">Yes, show me new PCs</div>
+                    <div id="compat_PCNoThanks">No thanks, I’m done</div>
+                </div>
+
+                <div class="slideFullWidth">
+                    <div id="compat_success_icon"></div>
+                    <h1 id="compat_Heading" class="slideHeading">Compatibility Report</h1>
+                    <div id="compat_SubHeading" class="narrator"></div>
+                    <div id="compatReport">
+                        <div id="compat_section_success">
+                            <div class="compat_section_success_column">
+                                <div class="compat_section_success_list">
+                                    <div id="compat_section_success_memory" class="success">
+                                        <img class="success" src="../resources/images/compat_checkmark_success_small.png" />
+                                        <p>Memory: Meets requirements</p>
+                                    </div>
+                                    <div id="compat_section_success_processor" class="success">
+                                        <img class="success" src="../resources/images/compat_checkmark_success_small.png" />
+                                        <p>Processor: 1GHz or faster</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="compat_section_success_column">
+                                <div class="compat_section_success_list">
+                                    <div id="compat_section_success_data" class="success">
+                                        <img class="success" src="../resources/images/compat_checkmark_success_small.png" />
+                                        <p>Data and files: Ready</p>
+                                    </div>
+                                    <div id="compat_section_success_touchscreen" class="disabled">
+                                        <img class="success" src="../resources/images/compat_checkmark_success_small.png" />
+                                        <img class="disabled" src="../resources/images/compat_checkmark_disabled.png" />
+                                        <p id="compat_section_success_touchscreen_subheading"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="compat_section_critical">
+                            <div class="compatTable">
+                                <div id="criticalIcon" class="compat_criticalIcon">&#160;</div>
+                                <div class="compat_section_heading narrator">About your PC</div>
+                                <div class="separator">
+                                    <hr/>
+                                </div>
+                            </div>
+                            <div class="compat_section_critical_subheading narrator">Here's why Windows&#160;10 can't be installed on this PC.</div>
+                            <div id="section_critical"></div>
+                        </div>
+
+                        <div id="compat_section_notes">
+                            <div class="compat_notesIcon">&#160;</div>
+                            <div id="section_notes">Check this report later for updates about your apps &amp; devices. We’re working continuously with partners to make more apps &amp; devices compatible with Windows&#160;10.</div>
+                        </div>
+
+                    </div>
+                    <div id="compatButtons" class="reservationControls">
+                        <div class="compat_lastRun">Last run</div>
+                        <div class="btnWhite"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="email" class="slide whiteBg">
+                <div class="slideFullWidth">
+                    <iframe src="javascript:false;" scrolling="no" frameborder="0" id="mailIFrame"></iframe>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="slides noNav" id="slidesNoNav">
+        </div>
+
+
+        <div class="slides" id="slides">
+            <div id="howToGetWin10" class="slide blueBgImg">
+                <div class="slide3col">
+                    <h1 class="slideHeading">
+                        How to get Windows&#160;10 for free!
+                    </h1>
+                    <div class="slideList">
+                        <div class="slideListItem listItem1">
+                            <div class="slideListItemIcon"></div>
+                            <div class="narrator"><strong>Reserve</strong> your copy of Windows&#160;10 now. It will download once available.*</div>
+                        </div>
+                        <div class="slideListItem listItem2">
+                            <div class="slideListItemIcon"></div>
+                            <div class="narrator"><strong>Install</strong> when you get a notification after July 29th</div>
+                        </div>
+                        <div class="slideListItem listItem3">
+                            <div class="slideListItemIcon"></div>
+                            <div class="narrator"><strong>Enjoy</strong> Windows&#160;10 for <span class="price">$119</span> free!*</div>
+                        </div>
+                        <div class="slideListItem listItemCompat success">
+                            <div class="slideListItemIcon"></div>
+                            <div class="narrator">
+                                <span id="compatLandingPage_SubHeading"></span><a href="index.html?page=compat">View report</a>
+                            </div>
+                        </div>
+                        <div class="slideListItem listItemLearnMore">
+                            <div class="slideListItemIcon"></div>
+                            <div class="narrator"><a href="http://go.microsoft.com/fwlink/?LinkId=615094" target="_blank">Learn more</a> about Windows&#160;10</div>
+                        </div>
+                    </div>
+                    <div id="video_thumbnail">
+                        <img src="../resources/images/home_video.png" />
+                    </div>
+                </div>
+                <div class="btnContainer oneCol">
+                    <div class="btnBlue">
+                        <a href="#" id="howToGetWin10_reserve">Reserve your free upgrade</a>
+                    </div>
+                    <div class="disclaimer">
+                        * Yes, free. Full version of Windows&#160;10, not a trial. 3GB download required, internet access fees may apply. Estimated retail price of Windows&#160;10 Home full license; actual prices may vary.
+                    </div>
+                </div>
+
+                <iframe id="video_player" src="" seamless="seamless" video-id="cJM4Zh9jK8o"></iframe>
+                <p id="video_close">Close Video</p>
+            </div>
+
+            <div id="expertSlide" class="slide blueBgImg">
+                <div class="slide5050">
+                    <h1 class="slideHeading">
+                        Familiar and easy
+                    </h1>
+                    <div class="floatLeft">
+                        <div class="floatLeft">
+                            <div class="narrator">
+                                Windows&#160;10 is familiar and easy to use. The Start menu is back and improved so you get quick access to your favorite things.  You’ll feel right at home in Windows&#160;10.
+                            </div>
+                            <div class="disclaimer narrator">Some apps sold separately; varies by market.</div>
+                        </div>
+                    </div>
+                    <div class="floatRight">
+                        <img src="images/slide02.png" alt="Laptop showing the Windows 10 Start menu" />
+                    </div>
+                </div>
+                <div class="btnContainer oneCol">
+                    <div class="btnBlue floatLeft"><a href="#" id="expertSlide_reserve">Reserve your free upgrade</a></div>
+                </div>
+            </div>
+
+            <div id="speedSlide" class="slide blueBgImg">
+                <div class="slide5050">
+                    <h1 class="slideHeading">
+                        Designed for speed
+                    </h1>
+                    <div class="floatLeft">
+                        <div class="narrator">
+                            Windows&#160;10 starts fast, resumes fast, and comes with more security features than ever. And it’s designed to work with the hardware and software you already use.
+                        </div>
+                        <div class="disclaimer narrator">Some apps sold separately; varies by market.</div>
+                    </div>
+                    <div class="floatRight">
+                        <img src="../resources/images/en/slide03.png" alt="Laptop showing several apps open on the screen at once" />
+                    </div>
+
+                </div>
+                <div class="btnContainer oneCol">
+                    <div class="btnBlue floatLeft"><a href="#" id="speedSlide_reserve">Reserve your free upgrade</a></div>
+                </div>
+            </div>
+
+            <div id="newFeaturesSlide" class="slide blueBgImg">
+                <div class="slide5050">
+                    <h1 class="slideHeading">
+                        Amazing new features
+                    </h1>
+                    <div class="floatLeft">
+                        <div class="narrator">Windows&#160;10 is packed with innovations like:</div>
+                        <div class="narrator"><span class="inline-checkmark-icon"></span>Cortana, your truly personal digital assistant</div>
+                        <div class="narrator"><span class="inline-checkmark-icon"></span>Microsoft Edge, an all-new browser</div>
+                        <div class="narrator"><span class="inline-checkmark-icon"></span>Great ways to stay organized and work fast</div>
+                        <div class="narrator"><span class="inline-checkmark-icon"></span>Great built-in apps like Photos, Maps and Music</div>
+                    </div>
+                    <div class="floatRight">
+                        <img src="images/slide04-cortana.png" alt="Laptop showing Project Spartan window open with a pizza recipe" />
+                    </div>
+                </div>
+                <div class="btnContainer oneCol">
+                    <div class="btnBlue floatLeft"><a href="#" id="newFeaturesSlide_reserve">Reserve your free upgrade</a></div>
+                </div>
+            </div>
+
+            <div id="mediaSlide" class="slide blueBgImg">
+                <div class="slide5050">
+                    <h1 class="slideHeading">
+                        Games. Entertainment. Apps. And more.
+                    </h1>
+                    <div class="floatLeft">
+                        <div class="narrator">
+                            Find your favorites in the Windows Store, your one-stop shop for great free and paid apps, popular games, movies, TV shows, and the latest music.
+                        </div>
+                        <div class="disclaimer narrator">
+                            App and content availability varies by market
+                        </div>
+                    </div>
+                    <div class="floatRight">
+                        <img src="images/slide05.png" alt="Laptop showing apps and games in the Windows Store" />
+                    </div>
+                </div>
+                <div class="btnContainer oneCol">
+                    <div class="btnBlue floatLeft"><a href="#" id="mediaSlide_reserve">Reserve your free upgrade</a></div>
+                </div>
+            </div>
+
+            <div id="howUpgradeWorks" class="slide blueBgImg">
+                <div class="slide3col">
+                    <h1 class="slideHeading">
+                        How this free upgrade works
+                    </h1>
+                    <div class="slideColumns">
+                        <div>
+                            <h3 class="icon_num_one">Reserve</h3>
+                            <p>Reserve your FREE upgrade to Windows&#160;10 now. It will download* once available, and you can cancel your reservation at any time.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="icon_num_two">Install</h3>
+                            <p>
+                                You’ll get a notification after July 29 after Windows&#160;10 is downloaded to your device. Install it right away or pick a time that’s good for you.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="icon_num_three">Enjoy</h3>
+                            <p>After it’s installed, Windows&#160;10 is all yours!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnContainer oneCol">
+                    <div class="btnBlue">
+                        <a href="#" id="howUpgradeWorks_reserve">Reserve your free upgrade</a>
+                    </div>
+                    <div class="disclaimer">
+                        *3 GB download, internet access fees may apply.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="arrows">
+            <a href="#" id="contentArrowSlideLeft"><span class="arrowLeft" id="arrowLeft"></span></a>
+            <a href="#" id="contentArrowSlideRight"><span class="arrowRight" id="arrowRight"></span></a>
+        </div>
+
+    </div>
+
+    <div class="footer" id="footerMain">
+        <img src="../resources/images/msft_logo.png" class="footerLogo" alt="Microsoft" />
+    </div>
+    <div class="footer" id="footerAlt">
+        <img src="../resources/images/msft_logo.png" class="footerLogo" alt="Microsoft" />
+        <div class="footerLinks">
+            <a href="http://go.microsoft.com/fwlink/?LinkId=522193" target="_blank">What this report covers</a>
+            <div class="compat_lastRun">Last run</div>
+        </div>
+    </div>
+</body>
+</html>
